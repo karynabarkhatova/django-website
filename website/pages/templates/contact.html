@@ -17,30 +17,27 @@
 <form action="/contact/" method="POST">
     {% csrf_token %}
     
-    Name:<br>
-    <input type="text" name="firstname"><br><br>
-    Last Name:<br>
-    <input type="text" name="lastname"> <br><br>
-    Email:<br>
-    <input type="email" name="email"> <br> <br>
-    Topic:<br>
-    <select name="topic">
-        <option> Make an appointment</option>
-        <option> Online consultation</option>
-        <option> Enrollment in a sarcasm course</option>
-        <option> Just wanna piss you off</option>
-    </select>
-    <br><br>
-    Your message:<br>
-    <textarea name="message" cols="50" rows="6"></textarea> <br><br>
+    <label for='first_name'>First Name: </label> <br>
+    {{ form.first_name }} <br><br>
 
-    To get a response via email: <input name='response' type="checkbox" checked=""><br>
+    <label for='last_name'>Last Name: </label> <br>
+    {{ form.last_name }} <br><br>
+    
+    <label for='email'>Email: </label> <br>
+    {{ form.email }} <br> <br>
 
-    <br>
+    <label for='topic'>Topic: </label> <br>
+    {{ form.topic }} <br><br>
+
+    <label for='message'>Message: </label> <br>
+    {{ form.message }} <br><br>
+
+    <label for='response'>Get response via email: </label> <br>
+    {{ form.response }} <br> <br>
     
     <button type="reset">Clean form</button>
     <button type="submit">Submit</button>
-
+    
 </form>
 
 {% endblock content %}

@@ -1,4 +1,6 @@
 from django.db import models
+from django.forms import ModelForm
+from datetime import datetime
 
 
 class Doctor(models.Model):
@@ -16,11 +18,17 @@ class Doctor(models.Model):
 
     def __str__(self):
         return self.name
-        
-    def photo(self):
-        return '<img src = "%s">' % (self.pic)
 
-    photo.allow_tags = True
-    photo.short_description = 'Photo of Doctor House'
+
+class Contact_Info(models.Model):
+    
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    email = models.EmailField()
+    topic = models.CharField(max_length=30)
+    message = models.TextField(blank=True)
+    response = models.BooleanField()
+    date_submitted = models.DateTimeField(default=datetime.now, blank=True)
+
 
     
