@@ -33,4 +33,4 @@ http://127.0.0.1:8000/
 http://127.0.0.1:8000/about
 http://127.0.0.1:8000/contact
 ```
-
+### The data which you write into the contact form (/contact/) will be sent to the database, also you can check it in admin panel (/admin/)
