@@ -15,7 +15,8 @@
 
 {% block content %}
 <form action="/contact/" method="POST">
-
+    {% csrf_token %}
+    
     Name:<br>
     <input type="text" name="firstname"><br><br>
     Last Name:<br>

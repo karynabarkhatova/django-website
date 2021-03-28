@@ -10,11 +10,11 @@
 {% endblock h1 %}
 
 {% block content %}
-    <img src="{% static 'images/drhouse.jpg' %} " alt="Photo of Doctor House">
 
-        <p class="quote"><i> &#171 &#187 </i></p>
+    <img src="{{ data.pic.url }}">
+        <p class="quote"><i> &#171 {{ data.quote }} &#187 </i></p>
 
-        <p>  </p>
+        <p> {{ data.biography }} </p>
       
 {% endblock content%}
 

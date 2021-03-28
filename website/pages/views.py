@@ -1,12 +1,15 @@
 from django.shortcuts import render
+from .models import Doctor
 
 
 def index(request):
-    return render(request, 'index.html')
+    data = Doctor.objects.get(id=1)
+    return render(request, 'index.html', {'data': data})
 
 
 def about(request):
-    return render(request, 'about.html')
+    data = Doctor.objects.get(id=1)
+    return render(request, 'about.html', {'data': data})
 
 
 def contact(request):

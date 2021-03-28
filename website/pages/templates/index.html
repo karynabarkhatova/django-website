@@ -15,25 +15,26 @@
 
 
 {% block content %}
+
 <table>
 
     <tr>
-        <td>NAME</td><td class="td2">Gregory House</td>
+        <td>NAME</td><td class="td2"> {{ data.name }}</td>
     </tr>
     <tr>
-        <td>AGE</td><td class="td2">61</td>
+        <td>AGE</td><td class="td2">{{ data.age }}</td>
     </tr>
     <tr>
-        <td>DATE OF BIRTHDAY</td><td class="td2">June 11th, 1959</td>
+        <td>DATE OF BIRTHDAY</td><td class="td2">{{ data.date_of_birthday }}</td>
     </tr>
     <tr>
-        <td>MARITAL STATUS</td><td class="td2">Single</td>
+        <td>MARITAL STATUS</td><td class="td2">{{ data.marital_status }}</td>
     </tr>
     <tr>
-        <td>OCCUPATION</td><td class="td2">Doctor, Head of Diagnostic Medicine, Residency in Pathology, Nephrology, infectious disease specialist, intensivist</td>
+        <td>OCCUPATION</td><td class="td2">{{ data.occupation }}</td>
     </tr>
     <tr>
-        <td>STATUS</td><td class="td2">Alive(legally declared dead)</td>
+        <td>STATUS</td><td class="td2">{{ data.status }}</td>
     </tr>
 </table>
 {% endblock content %}
