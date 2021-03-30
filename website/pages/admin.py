@@ -13,4 +13,4 @@ class DoctorAdmin(admin.ModelAdmin):
 
 @admin.register(Contact_Info)
 class AdminForm(admin.ModelAdmin):
-    list_display = ('first_name',)
+    list_display = ('first_name', 'last_name', 'email')
